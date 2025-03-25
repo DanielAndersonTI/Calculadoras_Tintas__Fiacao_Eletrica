@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tinta</title>
+    <link rel="stylesheet" href="StyleCalculadoraDeTinta.css">
+</head>
+<body>
+
+    <div class="calculadora-tinta">
+        <h2>Calculadora de Tinta</h2>
+        <label for="altura">Altura da Parede (m):</label>
+        <input type="number" id="altura" step="0.01" placeholder="Ex: 2.5">
+        
+        <label for="largura">Largura da Parede (m):</label>
+        <input type="number" id="largura" step="0.01" placeholder="Ex: 3.5">
+
+        <button onclick="calcularTinta()">Calcular</button>
+
+        <p id="resultado"></p>
+        <p id="demao"></p>
+    </div>
+
+    <script src="ScriptCalculadoraDeTinta.js"></script> <!-- Movemos o JS para um arquivo externo -->
+</body>
+</html>

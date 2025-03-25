@@ -1,0 +1,150 @@
+.calculadora-fios {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.calculadora-fios h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+.calculadora-fios h4 {
+    color: #7f8c8d;
+    font-weight: normal;
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.9em;
+}
+
+.grupo-formulario input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.grupo-opcoes {
+    display: flex;
+    margin-bottom: 8px;
+    width: 33%;
+    justify-content: flex-start;
+}
+
+.botao-opcao {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-align: center;
+    font-size: 0.85em;
+    width: 50%;
+}
+
+.botao-opcao:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.botao-opcao:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.botao-opcao.ativo {
+    color: white;
+}
+
+.botao-sim {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.botao-sim.ativo {
+    background-color: #27ae60;
+}
+
+.botao-nao {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.botao-nao.ativo {
+    background-color: #e74c3c;
+}
+
+.grupo-oculto {
+    display: none;
+    margin-top: 8px;
+}
+
+.botao-calcular {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.botao-calcular:hover {
+    background-color: #2980b9;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    display: none;
+    font-size: 0.9em;
+}
+
+.resultado h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+.observacao {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin-top: 12px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.dica-tecnica {
+    font-size: 0.9em;
+    color: #e74c3c;
+    margin-top: 10px;
+    border-left: 3px solid #e74c3c;
+    padding-left: 10px;
+}
+
+strong {
+    color: #2c3e50;
+}

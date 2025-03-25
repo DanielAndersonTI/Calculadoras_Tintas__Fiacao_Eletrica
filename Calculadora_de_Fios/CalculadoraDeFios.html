@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Fios para Instalações Elétricas</title>
+    <link rel="stylesheet" href="StyleCalculadoraDeFios.css">
+</head>
+<body>
+    <div class="calculadora-fios">
+        <h2>Calculadora de Fios para Instalações Elétricas</h2>
+        <h4>Observação: Consideramos que você utilizou uma trena para medir a distância que o fio percorrerá, 
+            levando em conta as alturas e as curvas.</h4>
+        
+        <div class="grupo-formulario">
+            <label>A instalação será feita a partir do quadro de energia?</label>
+            <div class="grupo-opcoes">
+                <button id="opcao-quadro-sim" class="botao-opcao botao-sim">Sim</button>
+                <button id="opcao-quadro-nao" class="botao-opcao botao-nao ativo">Não</button>
+            </div>
+        </div>
+        
+        <div class="grupo-formulario">
+            <label for="distancia">Distância total do percurso (metros):</label>
+            <input type="number" id="distancia" step="0.1" min="0" placeholder="Ex: 2.5">
+        </div>
+        
+        <div class="grupo-formulario">
+            <label>Serão instaladas lâmpadas?</label>
+            <div class="grupo-opcoes">
+                <button id="opcao-lampadas-sim" class="botao-opcao botao-sim">Sim</button>
+                <button id="opcao-lampadas-nao" class="botao-opcao botao-nao ativo">Não</button>
+            </div>
+            <div id="grupo-quantidade-lampadas" class="grupo-oculto">
+                <label for="quantidade-lampadas">Quantidade de lâmpadas:</label>
+                <input type="number" id="quantidade-lampadas" min="0" placeholder="Ex: 3">
+            </div>
+        </div>
+        
+        <div class="grupo-formulario">
+            <label>Serão instaladas tomadas?</label>
+            <div class="grupo-opcoes">
+                <button id="opcao-tomadas-sim" class="botao-opcao botao-sim">Sim</button>
+                <button id="opcao-tomadas-nao" class="botao-opcao botao-nao ativo">Não</button>
+            </div>
+            <div id="grupo-quantidade-tomadas" class="grupo-oculto">
+                <label for="quantidade-tomadas">Quantidade de tomadas:</label>
+                <input type="number" id="quantidade-tomadas" min="0" placeholder="Ex: 2">
+            </div>
+        </div>
+        
+        <button class="botao-calcular">Calcular Metragem Necessária</button>
+        
+        <div id="resultado" class="resultado">
+            <h3>Resultado:</h3>
+            <div id="texto-resultado"></div>
+            <div class="observacao" id="observacao-resultado"></div>
+        </div>
+    </div>
+
+    <script src="ScriptCalculadoraDeFios.js"></script>
+</body>
+</html>

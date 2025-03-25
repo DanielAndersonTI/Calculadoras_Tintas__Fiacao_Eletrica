@@ -1,0 +1,28 @@
+.calculadora-tinta {
+    max-width: 400px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.calculadora-tinta input,
+.calculadora-tinta button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.calculadora-tinta button {
+    background: #0073aa;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.calculadora-tinta button:hover {
+    background: #005177;
+}

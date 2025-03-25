@@ -1,0 +1,65 @@
+
+<div class="calculadora-tinta">
+    <h2>Calculadora de Tinta</h2>
+    <label for="altura">Altura da Parede (m):</label>
+    <input type="number" id="altura" step="0.01" placeholder="Ex: 2.5">
+    <label for="largura">Largura da Parede (m):</label>
+    <input type="number" id="largura" step="0.01" placeholder="Ex: 3.5">
+
+    <button onclick="calcularTinta()">Calcular</button>
+
+    <p id="resultado"></p>
+    <p id="demao"></p>
+</div>
+
+<script>
+    function calcularTinta() {
+        let altura = parseFloat(document.getElementById("altura").value);
+        let largura = parseFloat(document.getElementById("largura").value);
+
+        if (isNaN(altura) || isNaN(largura) || altura <= 0 || largura <= 0) {
+            documnent.getElementById("resultado").innerHTML = "Por favor, insira valores válidos";
+            document.getElementById("demao").innerHTML = "";
+            return;
+        }
+
+        let area = altura * largura;
+        let litrosNecessarios = area / 10;
+
+        let umaDemao = Math.ceil(litrosNecessarios);
+        let duasDemaos = Math.ceil(litrosNecessarios * 2);
+
+
+        document.getElementById("resultado")
+            .innerHTML = `Você precisará de aproximadamente <strong>${umaDemao} L </strong> de tinta`;
+        document.getElementById("demao")
+            .innerHTML = `Se quiser dar duas demãos de tinta, precisará de <strong>${duasDemaos} L </strong>`;
+    }
+</script>
+
+<style>
+.paint-calculator {
+    max-width: 400px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.paint-calculator input, .paint-calculator button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.paint-calculator button {
+    background: #0073aa; /* Cor padrão do WordPress */
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.paint-calculator button:hover {
+    background: #005177;
+}
+</style>
